@@ -1,0 +1,6 @@
+[submodule "pd-acid-core"]
+	path = pd-acid-core
+	url = git@github.com:chr15m/pd-acid-core.git
+[submodule "SyncJams"]
+	path = SyncJams
+	url = git@github.com:chr15m/SyncJams.git
