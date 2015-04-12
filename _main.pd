@@ -1,4 +1,4 @@
-#N canvas 797 1161 724 359 10;
+#N canvas 518 345 724 359 10;
 #X declare -path ./SyncJams/pure-data/;
 #X declare -path ./pd-acid-core/;
 #X declare -path .;
@@ -105,16 +105,16 @@
 #X obj 357 153 r acid/set-octave;
 #X obj 217 46 s ACID-SEED/r;
 #X obj 217 24 random 65536;
-#X obj 163 168 r acid/notes;
-#X obj 243 168 r acid/rootnote;
-#X obj 243 190 print rootnote;
-#X obj 163 190 print notes;
+#X obj 163 159 r acid/notes;
+#X obj 243 159 r acid/rootnote;
+#X obj 243 181 print rootnote;
+#X obj 163 181 print notes;
 #N canvas 667 1308 450 452 magic 0;
 #X obj 116 366 u_magic-freq;
 #X obj 116 282 r delay/tune;
 #X obj 131 310 r bpm;
 #X obj 170 310 r bpm_r;
-#X msg 131 340 bpm \$1;
+#X msg 131 340 140;
 #X obj 185 390 s delay/length;
 #X obj 305 120 list;
 #X obj 258 312 list prepend notes;
@@ -164,6 +164,10 @@
 #X connect 23 0 11 0;
 #X restore 63 191 pd magic;
 #X floatatom 7 108 5 0 0 0 - - -, f 5;
+#N canvas 2 50 450 300 table-match 0;
+#X restore 300 310 pd table-match;
+#X obj 226 227 s acid/wave;
+#X obj 226 205 r acid/wave/name/idx;
 #X connect 1 0 2 0;
 #X connect 4 0 33 0;
 #X connect 5 0 3 0;
@@ -202,3 +206,4 @@
 #X connect 46 0 45 0;
 #X connect 47 0 50 0;
 #X connect 48 0 49 0;
+#X connect 55 0 54 0;
