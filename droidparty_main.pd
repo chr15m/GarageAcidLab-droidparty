@@ -1,4 +1,4 @@
-#N canvas 386 130 450 321 10;
+#N canvas 383 115 450 321 10;
 #X declare -path ./SyncJams/pure-data/;
 #X declare -path ./pd-acid-core/;
 #X declare -path .;
@@ -11,7 +11,7 @@
 #X declare -path ./rjlib/rj;
 #X obj 360 12 numberbox 64 32 bpm_r bpm 30 300 140;
 #X obj 13 65 hsl 128 32 30 127 0 1 acid/cutoff empty acid/cutoff -2
--8 0 10 -262144 -1 -1 6900 1;
+-8 0 10 -262144 -1 -1 7500 1;
 #X obj 150 65 hsl 128 32 1 5 0 1 acid/rez empty acid/rez -2 -8 0 10
 -262144 -1 -1 1000 1;
 #X obj 10 12 wordbutton 128 32 new_acid;
@@ -22,7 +22,7 @@
 #X obj 150 115 hsl 128 32 0 1.1 0 1 delay/feedback empty delay/feedback
 -2 -8 0 10 -262144 -1 -1 1300 1;
 #X obj 290 115 hsl 128 32 0 20 0 1 distortion empty distortion -2 -8
-0 10 -262144 -1 -1 8700 1;
+0 10 -262144 -1 -1 2800 1;
 #X obj 289 12 nbx 5 32 0 65536 0 1 ACID-SEED ACID-SEED/r empty 0 -8
 0 10 -262144 -1 -1 1025 256;
 #X obj 13 164 hradio 32 1 1 4 acid/set-octave empty octave 0 -8 0 10
@@ -68,7 +68,7 @@
 #X obj 35 229 tgl 20 0 \$0/accent/1 \$0/accent/r/1 empty 17 7 0 10
 -262144 -1 -1 0 1;
 #X obj 57 229 tgl 20 0 \$0/accent/2 \$0/accent/r/2 empty 17 7 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 0 2;
 #X obj 79 229 tgl 20 0 \$0/accent/3 \$0/accent/r/3 empty 17 7 0 10
 -262144 -1 -1 1 1;
 #X obj 120 229 tgl 20 0 \$0/accent/4 \$0/accent/r/4 empty 17 7 0 10
@@ -78,13 +78,13 @@
 #X obj 164 229 tgl 20 0 \$0/accent/6 \$0/accent/r/6 empty 17 7 0 10
 -262144 -1 -1 0 2;
 #X obj 186 229 tgl 20 0 \$0/accent/7 \$0/accent/r/7 empty 17 7 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 0 2;
 #X obj 227 229 tgl 20 0 \$0/accent/8 \$0/accent/r/8 empty 17 7 0 10
 -262144 -1 -1 2 2;
 #X obj 249 229 tgl 20 0 \$0/accent/9 \$0/accent/r/9 empty 17 7 0 10
 -262144 -1 -1 1 1;
 #X obj 271 229 tgl 20 0 \$0/accent/10 \$0/accent/r/10 empty 17 7 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 0 2;
 #X obj 293 229 tgl 20 0 \$0/accent/11 \$0/accent/r/11 empty 17 7 0
 10 -262144 -1 -1 1 1;
 #X obj 334 229 tgl 20 0 \$0/accent/12 \$0/accent/r/12 empty 17 7 0
@@ -94,7 +94,7 @@
 #X obj 378 229 tgl 20 0 \$0/accent/14 \$0/accent/r/14 empty 17 7 0
 10 -262144 -1 -1 0 1;
 #X obj 400 229 tgl 20 0 \$0/accent/15 \$0/accent/r/15 empty 17 7 0
-10 -262144 -1 -1 0 2;
+10 -262144 -1 -1 0 1;
 #X obj 13 255 taplist 20 20 \$0/note/r/0 \$0/note/0 - 1 2 3 4;
 #X obj 35 255 taplist 20 20 \$0/note/r/1 \$0/note/1 - 1 2 3 4;
 #X obj 57 255 taplist 20 20 \$0/note/r/2 \$0/note/2 - 1 2 3 4;
@@ -135,3 +135,7 @@
 ;
 #X obj 216 12 taplist 64 32 acid/wave/set acid/wave/name saw sqr;
 #X obj 369 321 _main \$0;
+#X obj 293 305 cnv 10 20 10 empty \$0/puck empty 20 12 0 14 -258113
+-66577 0;
+#X obj 147 12 hradio 32 1 0 2 acid/speed/set empty speed 0 -8 0 10
+-262144 -1 -1 0;
