@@ -1,4 +1,4 @@
-#N canvas 518 345 724 359 10;
+#N canvas 511 310 724 359 10;
 #X declare -path ./SyncJams/pure-data/;
 #X declare -path ./pd-acid-core/;
 #X declare -path .;
@@ -72,7 +72,7 @@
 #X connect 9 0 8 0;
 #X connect 10 0 3 0;
 #X restore 7 191 pd delay;
-#X floatatom 217 90 10 0 0 0 - - -, f 10;
+#X floatatom 217 90 10 0 0 0 - - -;
 #X obj 498 5 declare -path ./SyncJams/pure-data/;
 #X obj 534 28 declare -path ./pd-acid-core/;
 #X obj 619 50 declare -path .;
@@ -163,8 +163,16 @@
 #X connect 22 0 23 0;
 #X connect 23 0 11 0;
 #X restore 63 191 pd magic;
-#X floatatom 7 108 5 0 0 0 - - -, f 5;
-#N canvas 2 50 450 300 table-match 0;
+#X floatatom 7 108 5 0 0 0 - - -;
+#N canvas 1138 158 450 300 table-match 0;
+#X obj 27 38 u_tablemap 16 \$1/slide/r/%d \$1/slide/%d acid/slide acid/slide
+;
+#X obj 27 73 u_tablemap 16 \$1/accent/r/%d \$1/accent/%d acid/octave
+acid/octave;
+#X obj 27 109 u_tablemap 16 \$1/note/r/%d \$1/note/%d/idx acid/sequence
+acid/sequence;
+#X obj 27 144 u_tablemap 16 \$1/octave/r/%d \$1/octave/%d/idx acid/octave
+acid/octave;
 #X restore 300 310 pd table-match;
 #X obj 226 227 s acid/wave;
 #X obj 226 205 r acid/wave/name/idx;
