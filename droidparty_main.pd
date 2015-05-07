@@ -1,4 +1,4 @@
-#N canvas 383 115 450 321 10;
+#N canvas 382 110 450 321 10;
 #X declare -path ./SyncJams/pure-data/;
 #X declare -path ./pd-acid-core/;
 #X declare -path .;
@@ -11,26 +11,26 @@
 #X declare -path ./rjlib/rj;
 #X obj 360 12 numberbox 64 32 bpm_r bpm 30 300 140;
 #X obj 13 65 hsl 128 32 30 127 0 1 acid/cutoff empty acid/cutoff -2
--8 0 10 -262144 -1 -1 7500 1;
+-8 0 10 -262144 -1 -1 7500 0;
 #X obj 150 65 hsl 128 32 1 5 0 1 acid/rez empty acid/rez -2 -8 0 10
--262144 -1 -1 1000 1;
+-262144 -1 -1 1000 0;
 #X obj 10 12 wordbutton 128 32 new_acid;
 #X obj 290 65 hsl 128 32 0 10 0 1 acid/envmod empty acid/envmod -2
--8 0 10 -262144 -1 -1 7800 1;
+-8 0 10 -262144 -1 -1 7800 0;
 #X obj 13 115 hsl 128 32 35 80 0 1 delay/tune empty delay/tune -2 -8
-0 10 -262144 -1 -1 2400 1;
+0 10 -262144 -1 -1 2400 0;
 #X obj 150 115 hsl 128 32 0 1.1 0 1 delay/feedback empty delay/feedback
--2 -8 0 10 -262144 -1 -1 1300 1;
+-2 -8 0 10 -262144 -1 -1 1300 0;
 #X obj 290 115 hsl 128 32 0 20 0 1 distortion empty distortion -2 -8
-0 10 -262144 -1 -1 2800 1;
+0 10 -262144 -1 -1 2800 0;
 #X obj 289 12 nbx 5 32 0 65536 0 1 ACID-SEED ACID-SEED/r empty 0 -8
 0 10 -262144 -1 -1 1025 256;
 #X obj 13 164 hradio 32 1 1 4 acid/set-octave empty octave 0 -8 0 10
 -262144 -1 -1 1;
 #X obj 149 164 hsl 128 32 0 300 0 0 acid/decay acid/decay/set acid/decay
--2 -8 0 10 -262144 -1 -1 6731 1;
+-2 -8 0 10 -262144 -1 -1 6731 0;
 #X obj 289 165 hsl 128 32 0 1 0 0 acid/swing acid/swing/set acid/swing
--2 -8 0 10 -262144 -1 -1 0 1;
+-2 -8 0 10 -262144 -1 -1 0 0;
 #X obj 13 203 tgl 20 0 \$0/slide/0 \$0/slide/r/0 empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 35 203 tgl 20 0 \$0/slide/1 \$0/slide/r/1 empty 17 7 0 10 -262144
@@ -135,7 +135,7 @@
 ;
 #X obj 216 12 taplist 64 32 acid/wave/set acid/wave/name saw sqr;
 #X obj 369 321 _main \$0;
-#X obj 293 305 cnv 10 20 10 empty \$0/puck empty 20 12 0 14 -258113
+#X obj 378 305 cnv 10 20 10 empty \$0/puck empty 20 12 0 14 -258113
 -66577 0;
 #X obj 147 12 hradio 32 1 0 2 acid/speed/set empty speed 0 -8 0 10
 -262144 -1 -1 0;
