@@ -1,4 +1,4 @@
-#N canvas 382 110 450 321 10;
+#N canvas 378 90 450 321 10;
 #X declare -path ./SyncJams/pure-data/;
 #X declare -path ./pd-acid-core/;
 #X declare -path .;
@@ -9,7 +9,6 @@
 #X declare -path ./common/;
 #X declare -path ./blockhead/;
 #X declare -path ./rjlib/rj;
-#X obj 360 12 numberbox 64 32 bpm_r bpm 30 300 140;
 #X obj 13 65 hsl 128 32 30 127 0 1 acid/cutoff empty acid/cutoff -2
 -8 0 10 -262144 -1 -1 7500 0;
 #X obj 150 65 hsl 128 32 1 5 0 1 acid/rez empty acid/rez -2 -8 0 10
@@ -135,7 +134,8 @@
 ;
 #X obj 216 12 taplist 64 32 acid/wave/set acid/wave/name saw sqr;
 #X obj 369 321 _main \$0;
-#X obj 378 305 cnv 10 20 10 empty \$0/puck empty 20 12 0 14 -258113
+#X obj 249 305 cnv 10 20 10 empty \$0/puck empty 20 12 0 14 -258113
 -66577 0;
 #X obj 147 12 hradio 32 1 0 2 acid/speed/set empty speed 0 -8 0 10
 -262144 -1 -1 0;
+#X obj 360 12 numberbox 64 32 bpm_r bpm 30 300 140;
